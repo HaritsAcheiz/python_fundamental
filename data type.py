@@ -49,10 +49,75 @@ print(type(mydata))
 # non-primitive data is not a basic data types that only store values,
 # but its constructed by collection of values with one or more basic data types.
 # include:
-# arrays, arrays are a compact way of collecting basic data with similar data types,
+# arrays, arrays are a compact way of collecting basic data (simply called sequence data types) with similar types (homogeneous).
+# Arrays are sequence data types that behave very much like lists, except that the type of objects stored in them is constrained
 
-# list,
+import array as arr
+int_array = arr.array("I",[1,2,3])
+print(type(int_array))
+
+# import array as arr
+# int_array = arr.array("I",['a','b','c'])
+# print(type(int_array))
+
+# list, Lists are sequence data types that can store collection of heterogeneous or homogeneous items.
+# Its written as a list of comma-separated element enclosed within square brackets.
+# List are muteable, its mean that you can change their content without change their identity
+
+l = [] #define empty list
+print(type(l))
+
+int_list = [1,2,3,4]
+print(int_list)
+print(type(int_list))
+
+mixed_list = [1,'a',0.5]
+print(mixed_list)
+print(type(int_list))
+mixed_list[0] = 5
+print(mixed_list)
+
 # tuples,
+# Tuples are a immutable standard sequence data type that can store collection of heterogeneous or homogeneous items ,
+# immutable means that once it's defined, you cannot delete, add or edit any values inside it.
+# Its written as a list of comma-separated element enclosed within parentheses.
+
+t = () #define empty tuples
+print(type(t))
+
+mixed_tuple = (1,'a',0.5)
+print(mixed_tuple)
+print(type(mixed_tuple))
+
+# mixed_tuple[0] = 5
+# print(mixed_tuple)
+
 # dictionary,
+# Dictionary are a mutable sequence data type that can store collection of heterogeneous or homogeneous items ,
+# Dictionaries are written as a list of comma-separated key-value pairs enclosed within curly brackets.
+# key is used to identify the item and the value holds the value of the item they are separated with colon ":".
+# While keys and values are immutable and can be any type of data.
+
+d = {} #define empty dictionary
+print(type(d))
+
+mixed_dict = {'a':1,'b':2,'c':0.5}
+print(mixed_dict)
+print(type(mixed_dict))
+
+print(f"Value for item a is {mixed_dict['a']}")
+
+mixed_dict['a'] = ['budi','naya','jamet']
+print(mixed_dict)
+print(f"Value for item a is {mixed_dict['a']}")
+print(f"Value for item a is {mixed_dict['a'][0]}")
+
+
 # sets,
-# files
+# Sets are an unordered sequence data type of unique elements.
+# They are mutable and written within curly brackets, but have no same value.
+
+mixed_list = ['a','b','c','b','c','c']
+mixed_set = set(mixed_list)
+print(mixed_set)
+print(type(mixed_set))
