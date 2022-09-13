@@ -25,6 +25,8 @@ print(type(mylist))
 #### [1, 'a', 0.5, [2, 'b', 0.9], (3, 'c', 1.1), {'d': 4, 'e': 'f', 'g': 2.3}]
 #### <class 'list'>
 
+# correlated variable and uncorrelated variable
+
 ### Access data
 print('\nindexing, access data with index number in python index number start from 0')
 mylist = [1,'a',0.5,[2,'b',0.9],(3,'c',1.1),{'d':4,'e':'f','g':2.3}]
@@ -106,4 +108,41 @@ for i in range(len(items)):
     print(items[i])
 #### item 1
 #### item 2
+
+### Modify List
+#### append method
+print('\nappend 1 item')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore append item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+mylist.append('item 7')
+print('\nafter append item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7']
+
+print('\nappend multiple items with looping')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore append item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
+added_items = ['item 7','item 8']
+for item in added_items:
+    mylist.append(item)
+print('\nafter append item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7','item 8']
+
+#### clear method
+print('\nbefore clear list')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+mylist.clear()
+print('\nafter clear list')
+print(mylist)
+#### []
+
+
+
 
