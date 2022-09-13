@@ -48,11 +48,11 @@ items = mylist[::]
 for i in range(len(items)):
     print(items[i])
 
-#### <list variable name> [<start index>:,<stop index>:<step>]
+#### <list variable name> [<start index>:,<end index>:<step>]
 #### start index is inclusive that means mentioned index number will be included in the selection.
 #### If start parameter is not filled, default value filled by 0
 #### stop index is exclusive that means mentioned index number won't be included in the selection
-#### If stop parameter is not filled, default value filled by last index number
+#### If end parameter is not filled, default value filled by last index number
 #### If step parameter is not filled, default value filled by 1
 
 print('\naccess data with index number between 2 and 4 (excluesive) with 1 step sequence')
@@ -77,7 +77,7 @@ for i in range(len(items)):
 #### item 5
 #### item 6
 
-print('\naccess data with negative stop index number')
+print('\naccess data with negative end index number')
 items = mylist[:-3:]
 for i in range(len(items)):
     print(items[i])
@@ -97,3 +97,13 @@ print('\naccess data with negative parameter index number')
 items = mylist[-1:-4:-2]
 for i in range(len(items)):
     print(items[i])
+#### item 6
+#### item 4
+
+print('\nslicing with 2 parameter, start and end, step will use default value')
+items = mylist[0:2]
+for i in range(len(items)):
+    print(items[i])
+#### item 1
+#### item 2
+
