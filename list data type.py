@@ -25,7 +25,47 @@ print(type(mylist))
 #### [1, 'a', 0.5, [2, 'b', 0.9], (3, 'c', 1.1), {'d': 4, 'e': 'f', 'g': 2.3}]
 #### <class 'list'>
 
-# correlated variable and uncorrelated variable
+#### Copy Value
+#### copy list using '=' operator
+print('\norigin list')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print(mylist)
+#### origin list
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+new_list = mylist
+print('\ncopy list')
+print(new_list)
+#### copy list
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+#### But the problem when you copy in this way is when you change one of the lists,
+#### either the origin list or the copy list, both of them will change.
+new_list.append('item 7')
+print('\norigin list')
+print(mylist)
+print('\ncopy list')
+print(new_list)
+#### origin list
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7']
+
+#### copy list
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7']
+
+#### to prevent that problem you can use copy method or use slicing to copy value from origin list
+### Copy method
+new_list = mylist.copy()
+print(new_list)
+### Slicing
+new_list = mylist[:] # Copy all value from mylist
+print(new_list)
+new_list = mylist[0:3] # Copy value from mylist from index 0 until 2
+print(new_list)
+#### And when you change value of copied list or origin list, it will only change modified list not both.
+print(mylist)
+new_list = mylist[:]
+print(new_list)
+new_list[0] = 'modified item'
+print(mylist)
+print(new_list)
 
 ### Access data
 print('\nindexing, access data with index number in python index number start from 0')
@@ -134,7 +174,10 @@ print('\nafter append item')
 print(mylist)
 #### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7','item 8']
 
+### Remove items
+
 #### clear method
+#### remove all item in list
 print('\nbefore clear list')
 print(mylist)
 #### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
@@ -142,6 +185,48 @@ mylist.clear()
 print('\nafter clear list')
 print(mylist)
 #### []
+
+#### pop method
+#### remove item by index and get its value
+print('\nbefore pop list')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+print('\nafter pop list')
+poped_item = mylist.pop(3)
+print(mylist)
+print(poped_item)
+#### ['item 1', 'item 2', 'item 3', 'item 5', 'item 6']
+#### item 4
+
+#### remove method
+#### remove item by it's value
+print('\nbefore remove list')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+print('\nafter remove list')
+mylist.remove('item 2')
+print(mylist)
+#### ['item 1', 'item 3', 'item 4', 'item 5', 'item 6']
+
+#### del method
+#### remove items by index or slice
+print('\nbefore del list')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+print('\nafter del index list')
+del mylist[2]
+print(mylist)
+#### ['item 1', 'item 3', 'item 4', 'item 5', 'item 6']
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nafter del slice list')
+del mylist[1:3]
+print(mylist)
+#### ['item 1', 'item 4', 'item 5', 'item 6']
+
+
 
 
 
