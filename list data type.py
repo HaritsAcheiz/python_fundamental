@@ -74,7 +74,7 @@ item = mylist[0]
 print(item)
 #### 1
 
-print('\nindexing inside loop to access all item with index')
+print('\nindexing inside loop to access all item within list')
 for i in range(len(mylist)):
     print(mylist[i])
 #### 1
@@ -225,9 +225,6 @@ print('\nafter del slice list')
 del mylist[1:3]
 print(mylist)
 #### ['item 1', 'item 4', 'item 5', 'item 6']
-
-
-
 
 
 
