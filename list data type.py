@@ -156,6 +156,7 @@ mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
 print('\nbefore append item')
 print(mylist)
 #### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
 mylist.append('item 7')
 print('\nafter append item')
 print(mylist)
@@ -173,6 +174,16 @@ for item in added_items:
 print('\nafter append item')
 print(mylist)
 #### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6', 'item 7','item 8']
+
+print('\nappend multiple items with extend')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore append item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
+mylist.extend(added_items)
+print('\nafter extend item')
+print(mylist)
 
 ### Remove items
 
