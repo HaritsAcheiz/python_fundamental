@@ -149,6 +149,19 @@ for i in range(len(items)):
 #### item 1
 #### item 2
 
+print('\nCount')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 3']
+print(mylist)
+print(f"count of item 3 is {mylist.count('item 3')}")
+#### Count
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 3']
+#### count of item 3 is 2
+
+print('\nindex')
+mylist = ['item 1','item 2','item 3','item 1','item 4','item 5']
+print(mylist)
+print(f"index of item 3 is {mylist.index('item 3')}")
+
 ### Modify List
 #### append method
 print('\nappend 1 item')
@@ -184,6 +197,44 @@ print(mylist)
 mylist.extend(added_items)
 print('\nafter extend item')
 print(mylist)
+
+print('\nadd an item with insert')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore insert item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
+mylist.insert(2,'item 7')
+print('\nafter insert item')
+print(mylist)
+#### ['item 1', 'item 2', 'item 7','item 3', 'item 4', 'item 5', 'item 6']
+
+print('\nchange index of element in reverse order')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore reverse element')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
+mylist.reverse()
+print('\nafter reverse element')
+print(mylist)
+#### ['item 6', 'item 5', 'item 4','item 3', 'item 2', 'item 1']
+
+print('\nchange order of element based on its value')
+mylist = ['item 1','item 2','item 3','item 4','item 5','item 6']
+print('\nbefore sort element')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3', 'item 4', 'item 5', 'item 6']
+
+mylist.sort(reverse=True)
+print('\nafter sort element desc by its value')
+print(mylist)
+#### ['item 6', 'item 5', 'item 4','item 3', 'item 2', 'item 1']
+
+mylist.sort()
+print('\nafter sort element asc by its value')
+print(mylist)
+#### ['item 1', 'item 2', 'item 3','item 4', 'item 5', 'item 6']
 
 ### Remove items
 
